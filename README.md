@@ -5,7 +5,7 @@ The objective is simple: choose the option that the minority of players choose.
 Basic description of game:
   1) Each round, output either 0 or 1
   2) Players in the minority will score a point
-  3) First player to reach target score (~1000) wins that match
+  3) First player to reach target score (~6000) wins that match
   4) Many matches will run, keeping track of winners
   5) Game code will be available here indefinitely
 
@@ -19,7 +19,7 @@ Rules for entry:
   5) Limit of one entry per player
   6) This game requires an odd number of players. If even, the host will add an entry.
   7) In event of errors or other issues, I will work with you to fix the code
-  8) The host reserves the right to soley decide which entrants are valid
+  8) The host reserves the right to solely decide which entrants are valid
   9) All entrants code will be hosted here (under CC0 licence AKA public domain) after the game
   10) Please give your function a short, fun, descriptive name
   11) Please also leave any contact details you wish in your code, with a reminder that it is public
