@@ -46,8 +46,10 @@ Submission deadline TBA, but will not be before November 17th
 
 Further notes about Table data:
 ```
-  [[score,score,score,...],     Table[0] is scores, initialized to all 0
-  [ move, move, move, ...],     Table[n] is moves from turn n (non-zero index)
-  [ move, move, move, ...]]     A new row in Table is added every turn.
-                                Table[0][n] references the same player as Table[x][n]
+  [[score_p1, score_p2, score_p3, ...],     Table[0] is scores, initialized to all 0, updated each round to current
+   [move_1p1, move_1p2, move_1p3, ...],     Table[n] is moves from turn n (non-zero index)
+   [move_2p1, move_2p2, move_2p3, ...],     Table[n][m] references the move from turn n, player m
+   [move_3p1, move_3p2, move_3p3, ...],     A new row in Table is added every turn.
+   ...]                                     Table[0][n] references the same player as Table[x][n]
+                                  
  ```
