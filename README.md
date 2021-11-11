@@ -42,3 +42,10 @@ Guide for game:
 Please feel free to ask any questions to me over discord.
 Contest is **not** limited to UofBayes members only, invite as you wish.
 Submission deadline TBA, but will not be before November 17th 
+
+
+Further notes about Table data:
+  [[score,score,score,...],     Table[0] is scores, initialized to all 0
+  [ move, move, move, ...],     Table[n] is moves from turn n (non-zero index)
+  [ move, move, move, ...]]     A new row in Table is added every turn.
+                                Table[0][n] references the same player as Table[x][n]
