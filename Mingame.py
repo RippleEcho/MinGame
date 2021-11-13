@@ -4,10 +4,15 @@ import math
 
 #import players here
 
+from ExampleBots import *
+
+def ran(t):
+    return random.choice([0,1])
+
 def Setup():
     
-    players =[]
-    MinGame(players,900,6000)
+    players =[copybest, flipflop, turnlist, ran, ran]
+    MinGame(players,500,1000)
 
 def MinGame (players,rounds,towin): #towin is points to win the round
     matches =[]
@@ -35,10 +40,11 @@ def MinRound(players,towin):
     for i in iterate:
         array[0].append(0)          #array[0] is running total of scores
 
-    while max(array[0])<roundwin:  #winning score
+    while max(array[0])< roundwin:  #until winning score
+        if max(array[0])==roundwin : 
+            if array[0].count(max(array[0]))>1 :
                                     #There can only be one.
-        if array[0].count(max(array[0]))>1 and max(array[0])==roundwin :
-            roundwin+=1             #change the score target
+                roundwin+=1         #change the score target
             
         move = []
         for k in iterate:
@@ -49,13 +55,13 @@ def MinRound(players,towin):
             move.append(pick)       #add choice to list
         array.append(move)          #add this round choices to array
         
-        count = array[-1].count(1) - array[-1].count(0)
-                    #neg if more zeros, pos if more ones,
+        count = array[-1].count(0) - array[-1].count(1)
+                    #pos if more zeros, neg if more ones,
                     #works if player count odd  
         minor = 0
         if count > 0 :              #determine winning choice
             minor = 1
-            
+  
         for j in iterate:           #loop over round
             if(array[-1][j] == minor):
                 array[0][j] += 1    #winners get ROUND point
